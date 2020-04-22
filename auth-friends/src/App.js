@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Login from "./components/Login";
@@ -12,8 +12,13 @@ function App() {
       <div className="App">
         <header className="App-header">
           <nav>
-            <Link to="/login">Login</Link> &nbsp;
-            <Link to="/friends">Friends</Link>
+            <Link className="link" to="/login">
+              Login
+            </Link>{" "}
+            &nbsp;
+            <Link className="link" to="/friends">
+              Friends
+            </Link>
           </nav>
         </header>
         <Switch>

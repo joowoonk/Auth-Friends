@@ -44,9 +44,10 @@ class AddFriend extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.addFriend}>
+      <form className="addFriend" onSubmit={this.addFriend}>
         <h2>Add your friend!</h2>
         <input
+          className="input"
           text="type"
           name="name"
           placeholder="Name"
@@ -54,6 +55,7 @@ class AddFriend extends React.Component {
           onChange={this.handleChange}
         />
         <input
+          className="input"
           text="type"
           name="age"
           placeholder="Age"
@@ -61,6 +63,7 @@ class AddFriend extends React.Component {
           onChange={this.handleChange}
         />
         <input
+          className="input"
           text="type"
           name="email"
           placeholder="Email"

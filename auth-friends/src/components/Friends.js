@@ -3,6 +3,8 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import AddFriend from "./AddFriend";
 import { Route } from "react-router-dom";
 
+import "../App.scss";
+
 class Friends extends React.Component {
   state = {
     friends: [],
@@ -26,19 +28,21 @@ class Friends extends React.Component {
   };
   render() {
     return (
-      <div>
+      <>
         <h1>friends</h1>
-        {this.state.friends.map((friend) => {
-          return (
-            <div>
-              <h3>{friend.name}</h3>
-              <p>Age: {friend.age}</p>
-              <p>Email: {friend.email}</p>
-            </div>
-          );
-        })}
         <Route component={AddFriend} />
-      </div>
+        <div className="friends">
+          {this.state.friends.map((friend) => {
+            return (
+              <div className="friend">
+                <h3>{friend.name}</h3>
+                <p>Age: {friend.age}</p>
+                <p>Email: {friend.email}</p>
+              </div>
+            );
+          })}
+        </div>
+      </>
     );
   }
 }
