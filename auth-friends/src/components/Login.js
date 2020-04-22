@@ -8,6 +8,25 @@ class Login extends React.Component {
       password: "",
     },
   };
+
+  handleChange = (e) => {
+    this.setState({
+      creds: {
+        ...this.state.creds,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
+  login = (e) => {
+    e.preventDefault();
+    axiosWithAuth()
+      .post("api/login", this.state.creds)
+      .then((res) => {
+        console.log(res);
+      });
+  };
+
   render() {
     return (
       <div>
@@ -30,3 +49,4 @@ class Login extends React.Component {
     );
   }
 }
+export default Login;
