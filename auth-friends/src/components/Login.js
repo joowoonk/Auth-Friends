@@ -39,7 +39,7 @@ class Login extends React.Component {
           />
           <input
             type="password"
-            name="passowrd"
+            name="password"
             value={this.state.creds.password}
             onChange={this.handleChange}
           />

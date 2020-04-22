@@ -17,7 +17,7 @@ function App() {
           </nav>
         </header>
         <Switch>
-          {/* <PrivateRoute exact path="/friends" component={Friends} /> */}
+          <PrivateRoute exact path="/friends" component={Friends} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>

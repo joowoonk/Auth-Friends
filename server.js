@@ -64,6 +64,7 @@ app.post("/api/login", (req, res) => {
   const { username, password } = req.body;
   if (username === "Lambda School" && password === "Lambda School") {
     req.loggedIn = true;
+    // console.log("res", res);
     res.status(200).json({
       payload: token,
     });
