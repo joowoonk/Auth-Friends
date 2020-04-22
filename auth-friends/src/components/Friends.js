@@ -32,9 +32,12 @@ class Friends extends React.Component {
           return (
             <div>
               <h3>{friend.name}</h3>
+              <p>Age: {friend.age}</p>
+              <p>Email: {friend.email}</p>
             </div>
           );
         })}
+        <Route component={AddFriend} />
       </div>
     );
   }
